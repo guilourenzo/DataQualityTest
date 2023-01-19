@@ -1,1 +1,25 @@
-<mxfile host="app.diagrams.net" modified="2023-01-19T03:05:59.864Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.55" version="20.8.5" etag="9JRzU4VHoucvJmnvTc5B" type="github"><diagram id="v_-6LOacIrOFuhDZfUT9">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-19T06:04:32.539Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.55" version="20.8.5" etag="QNsmeB4_sDkIO73lI3ei" type="github">
+  <diagram id="IoU2GGDHHUpPMA-xkH0z" name="Página-1">
+    <mxGraphModel dx="1434" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OC1l3K9IEWGWk0lt1pR5-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://docs.greatexpectations.io/assets/images/data_context_does_for_you-df2eca32d0152ead16cccd5d3d226abb.png;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="710.24" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="OC1l3K9IEWGWk0lt1pR5-8" value="&lt;h1&gt;Data Context&lt;/h1&gt;&lt;p&gt;Cria a estrutura de pastas necessárias para a execução de todos os processos do GE.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://docs.greatexpectations.io/docs/guides/setup/configuring_data_contexts/how_to_instantiate_a_data_context_without_a_yml_file#1-create-a-datacontextconfig&quot;&gt;How to instantiate a Data Context without a yml file | Great Expectations&lt;/a&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="OC1l3K9IEWGWk0lt1pR5-9" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="350" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="OC1l3K9IEWGWk0lt1pR5-11" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="460" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="OC1l3K9IEWGWk0lt1pR5-13" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;dataSourceGE = &lt;span style=&quot;color: #4ec9b0;&quot;&gt;DataContextConfig&lt;/span&gt;(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;store_backend_defaults&lt;/span&gt;=&lt;span style=&quot;color: #4ec9b0;&quot;&gt;FilesystemStoreBackendDefaults&lt;/span&gt;(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;root_directory&lt;/span&gt;=&lt;span style=&quot;color: #9cdcfe;&quot;&gt;root_directory&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ),&lt;/div&gt;&lt;div&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;context = &lt;span style=&quot;color: #4ec9b0;&quot;&gt;gx&lt;/span&gt;.&lt;span style=&quot;color: #dcdcaa;&quot;&gt;get_context&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe;&quot;&gt;project_config&lt;/span&gt;=&lt;span style=&quot;color: #9cdcfe;&quot;&gt;dataSourceGE&lt;/span&gt;)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="470" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
