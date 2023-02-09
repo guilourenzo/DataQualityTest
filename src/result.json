@@ -1,0 +1,121 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Looks_vs_Personality",
+      "data_connector_name": "folderConnector",
+      "datasource_name": "pandasDataSource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230121T084715.847019Z",
+      "pandas_data_fingerprint": "0c982837d0273530a3f460eb85b06d9f"
+    },
+    "batch_spec": {
+      "path": "\\development\\wsl\\DataQualityTest\\data\\Looks_vs_Personality.csv"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "dataQuality_Check",
+    "expectation_suite_name": "DataQuality",
+    "great_expectations_version": "0.15.43",
+    "run_id": {
+      "run_name": "qualityCheck_21-01-2023_05-47-15",
+      "run_time": "2023-01-21T05:47:15.842455+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230121T084715.872411Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "e350061c4557d9748884462d8f3175b0",
+          "column": "Question"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 1440,
+        "partial_unexpected_counts": [
+          {
+            "count": 3,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          3,
+          4,
+          5
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 3,
+        "unexpected_percent": 0.20833333333333334
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "e350061c4557d9748884462d8f3175b0",
+          "column": "Percentage",
+          "max_value": 1,
+          "min_value": 0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 1440,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": 8.0
+          },
+          {
+            "count": 1,
+            "value": 18.0
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          9
+        ],
+        "partial_unexpected_list": [
+          18.0,
+          8.0
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 0.1388888888888889,
+        "unexpected_percent_nonmissing": 0.1388888888888889,
+        "unexpected_percent_total": 0.1388888888888889
+      },
+      "success": false
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 2,
+    "success_percent": 0.0,
+    "successful_expectations": 0,
+    "unsuccessful_expectations": 2
+  },
+  "success": false
+}
