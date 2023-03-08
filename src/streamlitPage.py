@@ -4,6 +4,7 @@ import pymongo
 import sqlite3
 from configparser import ConfigParser
 from utils.utils import *
+from datetime import datetime
 
 CONFIG = ConfigParser()
 CONFIG.read('../config/dq.ini')
@@ -21,7 +22,7 @@ connect, rules, results = st.tabs(['Conexão', 'Regras', 'Resultados'])
 
 with connect:
 # Select data source type
-    data_source = st.selectbox("Select data source type", options=["CSV", "SQL", "MongoDB"])
+    data_source = st.selectbox("Select data source type", options=["CSV", "SQL", "MongoDB", "Parquet"])
 
     # Read data
     if data_source == "CSV":
@@ -30,9 +31,20 @@ with connect:
             csv = read_csv(file_path)
             data = csv[0]
             connection = csv[1]
+    
+    elif data_source == 'Parquet':
+        parquet_path = st.text_input("URL to Parquet")
+
+        if st.button("Import Parquet files"):
+            parquet = read_parquet(parquet_path)
+            data = parquet[0]
+            connection = parquet[1]
+            print(connection)
+    
     else:
         host = st.text_input("Host")
         port = st.number_input("Port", value=0, step=1)
+
         if data_source == "SQL":
             username = st.text_input("Username")
             password = st.text_input("Password", type="password")
@@ -65,14 +77,13 @@ with rules:
         # Create expectations dictionary
         expectations = {
             "file_path": connection,
+            "date_time": datetime.now(),
             "column_name": selected_col,
             "expectations": selected_expectations
         }
 
         # Register expectations
         if st.button("Register expectations"):
-            st.header(f'{HOST} | {PORT} | {DB} | {COL}')
-            
             register_expectations_mongo(HOST, PORT, DB, COL, expectations)
             st.success("Expectations registered successfully!")
 

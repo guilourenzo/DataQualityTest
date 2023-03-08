@@ -19,6 +19,9 @@ def read_mongo(host, port, database, collection):
     cursor = db[collection].find()
     return pd.DataFrame(list(cursor)), str(f'pymongo.MongoClient({host}, {port})')
 
+def read_parquet(parquet_path):
+    return pd.read_parquet(parquet_path), str(f'{parquet_path}')
+
 # Function to register expectations in MongoDB
 def register_expectations_mongo(host, port, database, collection, expectations):
     print(host)
