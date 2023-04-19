@@ -6,6 +6,9 @@ import sqlite3
 def read_csv(file_path):
     return pd.read_csv(file_path), str(f'{file_path}')
 
+def read_parquet(file_path):
+    return pd.read_parquet(file_path), str(f'{file_path}')
+
 # Function to read data from a SQL database
 def read_sql(host, port, username, password, database, table):
     conn = sqlite3.connect(f"sqlite://{host}:{port}/{database}")
