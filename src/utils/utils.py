@@ -3,8 +3,8 @@ import pymongo
 import sqlite3
 
 # Function to read data from a CSV file
-def read_csv(file_path):
-    return pd.read_csv(file_path), str(f'{file_path}')
+def read_csv(file_path, file_sep):
+    return pd.read_csv(file_path, sep=file_sep), str(f'{file_path}')
 
 def read_parquet(file_path):
     return pd.read_parquet(file_path), str(f'{file_path}')
